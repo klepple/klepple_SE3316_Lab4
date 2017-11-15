@@ -3,10 +3,18 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CoursesService {
 
-  constructor() { }
+  courseList:string[] = ["course1", "course2", "course3"];
+  
+  constructor() {
+    //courseList = ["course1", "course2", "course3"];   
+  }
   
   getCourses() : string[] {
-      return ["course1", "course2", "course3"];
+      return this.courseList;
+  }
+  
+  saveCourse(course: string) {
+    this.courseList.push(course);
   }
 
 }

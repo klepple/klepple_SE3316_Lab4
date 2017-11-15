@@ -10,7 +10,7 @@ import { AuthorsService } from '../authors.service';
 })
 
 export class AuthorsComponent implements OnInit {
-  title = "The Authors (Title)";
+  title = "The wordsmiths:";
   authors;
 
   constructor(authorsService: AuthorsService) {

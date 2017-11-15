@@ -11,11 +11,12 @@ import { AutoGrowDirective } from ''
 })
 export class CoursesComponent implements OnInit {
 
-  title = "The title of the course page";
+  title = "Currently enrolled in:";
   courses;
   
-  constructor(coursesService: CoursesService) { 
+  constructor(public coursesService: CoursesService) { 
     this.courses = coursesService.getCourses();
+    this.courses = coursesService.courseList;
   }
   
   ngOnInit() {

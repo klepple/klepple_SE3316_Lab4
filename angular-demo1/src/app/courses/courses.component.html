@@ -1,8 +1,13 @@
-<h2>Courses</h2>
+<h2>Course Section</h2>
 {{title}}
-<input type='text' autoGrow />
 <ul>
     <li *ngFor="let course of courses">
         {{course}}
     </li>
 </ul>
+<p>
+    Enter new course:
+</p>
+<input #newCourse type='text' autoGrow />
+<button (click) = "coursesService.saveCourse(newCourse.value)">Add course</button>
+
